@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" 
+    type="image/png" 
+    href="Untitled45_20230721191925.png">
+    <title>Donate Form</title>
+</head>
+<body>
+<div class="scrollmenu">
+  <a href="./home">Home</a>
+<div class="dropdown">
+    <button class="dropdown-button"><a>Gallery</a></button>
+    <div class="dropdown-content">
+        <a href="./Gallery art 19;6" class="dropdown-item" >art 19:6</a>
+        <a href="./Gallery art 6;19" class="dropdown-item">art 6:19</a>
+        <a href="./video jj art " class="dropdown-item">video jj art</a>
+    </div>
+</div>
+  <a href="./about me">About Us</a>
+  <a href="./donate"><button class="button">Donate</button>
+  </a>
+<div class="dropdown">
+    <button class="dropdown-button">
+      <a>Social media</a></button>
+    <div class="dropdown-content">
+      <a href="https://www.youtube.com/@fianDev"><i class="fa-brands fa-youtube"></i><span>Youtube1</span></a>
+     <a href="https://www.tiktok.com/@fian_tirta"><i class="fa-brands fa-tiktok"></i><span>Tiktok</span></a>
+      <a href="https://www.snackvideo.com/@grapetubers"><i class="fa-barcode"></i><span>SnackVideo</span></a>
+      <a href="https://www.youtube.com/@animevirday6629">
+                    <i class="fa-brands fa-youtube"></i>
+                    <span>youtube3</span></a>
+      <a href="https://grape-tubers.itch.io/">
+                    <i class="fa-brands fa-itch-io"></i>
+                    <span>Itch.io</span></a>
+    </div>
+    <div class="navbar-brand" id="user-display-name"></div>
+ </div>
+ </div>
+    <h1>Donate to Our Cause</h1>
+    <form id="donationForm" action="" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="amount">Donation Amount:</label>
+        <input type="number" id="amount" name="amount" min="1" step="1" required><br><br>
+
+        <label for="currency">Currency:</label>
+        <select id="currency" name="currency" required>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <!-- Add more currency options as needed -->
+        </select><br><br>
+
+        <label for="message">Message (optional):</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Donate">
+    </form>
+</body>
+<style>
+       
+       .navbar-brand{
+	font-family: 'Dancing Script', cursive;
+            color: rgb(255, 255, 255);
+    float: right;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+    .button {
+	font-family: 'Dancing Script', cursive;
+            background-color: black;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 90px;
+            cursor: pointer;
+            transition: background-color 0.7s, color 0s;
+        }
+
+        /* Button hover effect */
+        .button:hover {
+            background-color: #00ff00;
+            color: #000000;
+        }
+    ul{
+	font-family: 'Dancing Script', cursive;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #1a1a1a;
+    }
+    li{
+        float: left;
+    }
+    li a{
+        display: block;
+        color: white; 
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    li a:hover{
+        color: blue;
+    }
+body{
+  background-color:black;
+}
+label,h1{
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 1);
+            animation: neon-glow 1s infinite alternate;
+}
+input,textarea
+{
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 24px;
+            text-transform: uppercase;
+            background-color: #000;
+            color: #fff;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+            cursor: pointer;
+            animation: neonBox-glow 4s infinite alternate;
+}
+
+        @keyframes neon-glow {
+            0% {
+                text-shadow: 0 0 10px rgba(0, 255, 0, 1);
+            }
+            100% {
+                text-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+            }
+        }
+
+        @keyframes neonBox-glow {
+            0% {
+                box-shadow: 0 0 6px rgba(0, 255, 0, 1);
+            }
+            100% {
+                box-shadow: 0 0 12px rgba(0, 255, 0, 0.5);
+            }
+        }
+</style>
+</html>
+
+<style>
+div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a,.navbar-brand {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+}
+</style>
+  
+    <style>
+        /* Style the container of the vertical dropdown */
+        .dropdown {
+            display: inline-block;
+        }
+
+        /* Style the button that will trigger the vertical dropdown */
+        .dropdown-button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Style the vertical dropdown content (hidden by default) */
+        .dropdown-content {
+          
+            display: none;
+            position: absolute;
+            background-color: black;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            left: 0; /* Adjust this value to control the dropdown's left position */
+        }
+
+        /* Style the individual items in the vertical dropdown */
+        .dropdown-item {
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            color: #333;
+        }
+
+        /* Change the color of the dropdown items on hover */
+        .dropdown-item:hover {
+            background-color: #ddd;
+        }
+
+        /* Show the vertical dropdown content when the button is clicked */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+      
+    @media (max-width: 768px) {
+      
+        /* Style the vertical dropdown content (hidden by default) */
+        .dropdown-content {
+          
+            display: none;
+            position: absolute;
+            background-color: black;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+          font-size:11px;
+            left: 0; /* Adjust this value to control the dropdown's left position */
+        }
+
+        /* Style the individual items in the vertical dropdown */
+        .dropdown-item {
+          font-size:11px;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            color: #333;
+        }
+      }
+    </style>
+    
+<script>
+    const displayName = localStorage.getItem('displayName');
+    document.getElementById('user-display-name').textContent = "Welcome, " + displayName;
+    if(displayName.value = "")
+    {
+        
+    document.getElementById('user-display-name').textContent = "";
+    }
+    else
+    {
+        
+    }
+</script>

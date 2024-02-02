@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <script>
+        const firebaseConfig = {
+  apiKey: "AIzaSyA2sly1BIbgoH49dI4bfz69TAr9V-e5zDA",
+  authDomain: "gallery-art-online.firebaseapp.com",
+  databaseURL: "https://gallery-art-online-default-rtdb.firebaseio.com",
+  projectId: "gallery-art-online",
+  storageBucket: "gallery-art-online.appspot.com",
+  messagingSenderId: "439879504776",
+  appId: "1:439879504776:web:56c4b30de431792984a03d"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+    </script>
+<html lang="en">
+<style>
+    
+    .button {
+	font-family: 'Dancing Script', cursive;
+            background-color: black;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Button hover effect */
+        .button:hover {
+            background-color: green;
+            color: #fff;
+        }
+    li{
+        float: left;
+    }
+    li a{
+        display: block;
+        color: white; 
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    li a:hover{
+        color: blue;
+    }
+    section ul{
+	font-family: 'Dancing Script', cursive;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow: hidden;
+        background-color: #1a1a1a;
+    }
+    section li{
+        float: left;
+    }
+    section li a{
+        display: block;
+        color: white; 
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    #image{
+        float: right;
+        height: 90%;
+    }
+    h2{
+	font-family: 'Dancing Script', cursive;
+        font-size: 20pt;
+        font-weight: lighter;
+    }
+    h1,h2,p{
+        color: white;
+        text-align: center;
+    }
+    #img-gal{
+        height: 360px;
+        padding: 50px;
+        max-width: 80%;
+        max-height: 80%;
+    }
+    footer{
+	font-family: 'Dancing Script', cursive;
+        background-color: #1a1a1a;
+        bottom: 0;
+        width: 100%;
+        padding: 3px;
+        position: fixed;
+    }
+    @media (max-width: 768px) {
+        #img-gal{
+            height: auto;
+            width: auto;
+            padding: 20px;
+      overflow: auto;
+        }
+        footer ul h1{
+	font-family: 'Dancing Script', cursive;
+            font-size: 6pt;
+        }
+footer ul li
+{
+    width: 0px;
+    height: 0px;
+}
+footer ul li a i
+{
+    font-size: 1em;
+}
+footer ul li:hover a span
+{
+	font-family: 'Dancing Script', cursive;
+    opacity: 1;
+    transform: scale(0.3) translateY(100%);
+}        
+footer ul
+{
+    gap: 40px;
+}
+    }   
+    .navbar-brand{
+	font-family: 'Dancing Script', cursive;
+            color: rgb(255, 255, 255);
+    float: right;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-Art</title>
+    <link rel="icon" 
+    type="image/png" 
+    href="Untitled45_20230721191925.png">
+</head>
+<body style="background-color: black;">
+<div class="scrollmenu">
+  <a href="./home">Home</a>
+<div class="dropdown">
+    <button class="dropdown-button"><a>Gallery</a></button>
+    <div class="dropdown-content">
+        <a href="./Gallery art 19;6" class="dropdown-item" >art 19:6</a>
+        <a href="./Gallery art 6;19" class="dropdown-item">art 6:19</a>
+        <a href="./video jj art " class="dropdown-item">video jj art</a>
+    </div>
+</div>
+  <a href="./about me">About Us</a>
+  <a href="./donate"><button class="button">Donate</button>
+  </a>
+<div class="dropdown">
+    <button class="dropdown-button">
+      <a>Social media</a></button>
+    <div class="dropdown-content">
+      <a href="https://www.youtube.com/@fianDev"><i class="fa-brands fa-youtube"></i><span>Youtube1</span></a>
+     <a href="https://www.tiktok.com/@fian_tirta"><i class="fa-brands fa-tiktok"></i><span>Tiktok</span></a>
+      <a href="https://www.snackvideo.com/@grapetubers"><i class="fa-barcode"></i><span>SnackVideo</span></a>
+      <a href="https://www.youtube.com/@animevirday6629">
+                    <i class="fa-brands fa-youtube"></i>
+                    <span>youtube3</span></a>
+      <a href="https://grape-tubers.itch.io/">
+                    <i class="fa-brands fa-itch-io"></i>
+                    <span>Itch.io</span></a>
+    </div>
+    <div class="navbar-brand" id="user-display-name"></div>
+ </div>
+ </div>
+    <section>
+        <h2> G A L L E R Y</h2>
+        <div id="art">
+        </div>
+    </section>
+        <p>copyright 2023 G-Art And grapetubers. All right Reserved</p>
+</body>
+</html>
+
+<style>
+div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a,.navbar-brand {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+}
+</style>
+  
+    <style>
+        /* Style the container of the vertical dropdown */
+        .dropdown {
+            display: inline-block;
+        }
+
+        /* Style the button that will trigger the vertical dropdown */
+        .dropdown-button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Style the vertical dropdown content (hidden by default) */
+        .dropdown-content {
+          
+            display: none;
+            position: absolute;
+            background-color: black;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            left: 0; /* Adjust this value to control the dropdown's left position */
+        }
+
+        /* Style the individual items in the vertical dropdown */
+        .dropdown-item {
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            color: #333;
+        }
+
+        /* Change the color of the dropdown items on hover */
+        .dropdown-item:hover {
+            color: blue;
+        }
+
+        /* Show the vertical dropdown content when the button is clicked */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+      
+    @media (max-width: 768px) {
+      
+        /* Style the vertical dropdown content (hidden by default) */
+        .dropdown-content {
+          
+            display: none;
+            position: absolute;
+            background-color: black;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+          font-size:11px;
+            left: 0; /* Adjust this value to control the dropdown's left position */
+        }
+
+        /* Style the individual items in the vertical dropdown */
+        .dropdown-item {
+          font-size:20px;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            color: #333;
+        }
+      }
+    </style>
+<script>
+
+        // Function to retrieve and display image URLs from Firebase Storage
+        function fetchImages() {
+        const imagePreview = document.getElementById('art');
+        const imageList = document.getElementById('art');
+            firebase.storage().ref('art 6:19').listAll()
+                .then((result) => {
+                    const imageUrls = [];
+                    result.items.forEach((item) => {
+                        item.getDownloadURL().then((url) => {
+                          
+                            imageUrls.push(url);
+                        const imageElement = document.createElement('img');
+                        imageElement.id="img-gal";
+                        imageElement.src = url;
+                        imagePreview.appendChild(imageElement);
+                            // Update the JSON representation on the page
+                            imageList.image = JSON.stringify(imageUrls, null, 2);
+                        });
+                    });
+                })
+                .catch((error) => {
+                    console.error('Error fetching images:', error);
+                });
+        }
+
+        // Fetch and display images initially
+        fetchImages();
+</script>
+
+<script>
+    const displayName = localStorage.getItem('displayName');
+    document.getElementById('user-display-name').textContent = "Welcome, " + displayName;
+    if(displayName.value = "")
+    {
+        
+    document.getElementById('user-display-name').textContent = "";
+    }
+    else
+    {
+        
+    }
+</script>

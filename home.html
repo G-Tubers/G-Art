@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    .button {
+	font-family: 'Dancing Script', cursive;
+            background-color: black;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .navbar-brand{
+	font-family: 'Dancing Script', cursive;
+            color: rgb(255, 255, 255);
+    float: right;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+        /* Button hover effect */
+        .button:hover {
+            background-color: green;
+            color: #fff;
+        }
+    ul{
+	font-family: 'Dancing Script', cursive;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #1a1a1a;
+    }
+    li{
+        float: right;
+    }
+    li a{
+        display: block;
+        color: white; 
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    li a:hover{
+        color: blue;
+    }
+    #image{
+        float: right;
+        height: 90%;
+    }
+    h1{
+	font-family: 'Dancing Script', cursive;
+        font-size: 35pt;
+    }
+    h2{
+	font-family: 'Dancing Script', cursive;
+        font-size: 20pt;
+        font-weight: lighter;
+    }
+    h1,h2,p{
+        color: white;
+        text-align: center;
+    }
+    #cont{
+        padding: 125px;
+    }
+    footer{
+        background-color: #1a1a1a;
+        bottom: 0;
+        width: 100%;
+        padding: 3px;
+        position: fixed;
+    }
+    footer h1{
+        text-align: center;
+        font-size: 20px;
+        color: white;
+    }
+    p{
+	font-family: 'Dancing Script', cursive;
+    }
+    @media (max-width: 768px) {
+        #image{
+            float: right;
+            width: 100%;
+            height: auto;
+        }
+        h1{
+	font-family: 'Dancing Script', cursive;
+            font-size: 20pt;
+        }
+        h2{
+	font-family: 'Dancing Script', cursive;
+            font-size: 15pt;
+        }
+        footer ul h1{
+	font-family: 'Dancing Script', cursive;
+            font-size: 6pt;
+        }
+footer ul li
+{
+    width: 0px;
+    height: 0px;
+}
+footer ul li a i
+{
+    font-size: 1em;
+}
+footer ul li:hover a span
+{
+	font-family: 'Dancing Script', cursive;
+    opacity: 1;
+    transform: scale(0.3) translateY(100%);
+}        
+footer ul
+{
+    gap: 40px;
+}
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-Art</title>
+    <link rel="icon" 
+    type="image/png" 
+    href="Untitled45_20230721191925.png">
+</head>
+<body style="background-color: black;">
+<div class="scrollmenu">
+  <a href="./home">Home</a>
+<div class="dropdown">
+    <button class="dropdown-button"><a>Gallery</a></button>
+    <div class="dropdown-content">
+        <a href="./Gallery art 19;6" class="dropdown-item" >art 19:6</a>
+        <a href="./Gallery art 6;19" class="dropdown-item">art 6:19</a>
+        <a href="./video jj art " class="dropdown-item">video jj art</a>
+    </div>
+</div>
+  <a href="./about me">About Us</a>
+  <a href="./donate"><button class="button">Donate</button>
+  </a>
+<div class="dropdown">
+    <button class="dropdown-button">
+      <a>Social media</a></button>
+    <div class="dropdown-content">
+      <a href="https://www.youtube.com/@fianDev"><i class="fa-brands fa-youtube"></i><span>Youtube1</span></a>
+     <a href="https://www.tiktok.com/@fian_tirta"><i class="fa-brands fa-tiktok"></i><span>Tiktok</span></a>
+      <a href="https://www.snackvideo.com/@grapetubers"><i class="fa-barcode"></i><span>SnackVideo</span></a>
+      <a href="https://www.youtube.com/@animevirday6629">
+                    <i class="fa-brands fa-youtube"></i>
+                    <span>youtube3</span></a>
+      <a href="https://grape-tubers.itch.io/">
+                    <i class="fa-brands fa-itch-io"></i>
+                    <span>Itch.io</span></a>
+    </div>
+    <div class="navbar-brand" id="user-display-name"></div>
+</div>
+ </div>
+ </div>
+    <section>
+        <img id="image" src="Untitled45_20230721191925.png" width="600" height="400">
+        <div id="cont">
+            <h1>G-Art</h1>
+            <h2>Never Give Up</h2>
+        </div>
+    </section>
+    <footer>
+        <style>
+            
+ul
+{
+    align-items: center;
+    position: relative;
+    display: flex;
+    gap: 50px;
+}
+ul li
+{
+    position: relative;
+    list-style: none;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+ul li::before
+{
+    content: '';
+    position: absolute;
+    inset: 30px;
+    box-shadow: 0 0 0 10px var(--clr),
+    0 0 0 20px var(--bg),
+    0 0 0 22px var(--clr);
+    transition: 0.5s;
+}
+ul li::after
+{
+    content: '';
+    position: absolute;
+    inset: 0px;
+    background: var(--bg);
+    transform: rotate(45deg);
+    transition: 0.5s;
+}
+ul li a
+{
+    position: relative;
+    text-decoration: none;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul li a i
+{
+    font-size: 2em;
+    transition: 0.5s;
+    color: var(--clr);
+}
+ul li:hover a i
+{
+    transform: translateY(-25%);
+}
+ul li a span
+{
+	font-family: 'Dancing Script', cursive;
+    position: absolute;
+    font-family: consolas;
+    color: var(--clr);
+    opacity: 0;
+    transition: 0.5s;
+    transform: scale(0) translateY(50%);
+}
+ul li:hover a span
+{
+	font-family: 'Dancing Script', cursive;
+    opacity: 1;
+    transform: scale(1) translateY(100%);
+}
+ul.effect01 li:hover::after
+{
+    inset: 0px;
+    transform: rotate(0deg);
+    background: var(--clr);
+}
+ul.effect01 li:hover a i,
+ul.effect01 li:hover a span
+{
+    color: #fff;
+}
+        </style>
+        <p>copyright 2023 G-Art and grapetubers. All right Reserved</p>
+</body>
+</html>
+
+<style>
+div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a,.navbar-brand {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+}
+</style>
+  
+    <style>
+        /* Style the container of the vertical dropdown */
+        .dropdown {
+            display: inline-block;
+        }
+
+        /* Style the button that will trigger the vertical dropdown */
+        .dropdown-button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Style the vertical dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: black;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            left: 0; /* Adjust this value to control the dropdown's left position */
+        }
+
+        /* Style the individual items in the vertical dropdown */
+        .dropdown-item {
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            color: #333;
+        }
+
+        /* Change the color of the dropdown items on hover */
+        .dropdown-item:hover {
+            color: blue;
+        }
+
+        /* Show the vertical dropdown content when the button is clicked */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    @media (max-width: 768px) {
+      
+        /* Style the vertical dropdown content (hidden by default) */
+        .dropdown-content {
+          
+            display: none;
+            position: absolute;
+            background-color: black;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+          font-size:11px;
+            left: 0; /* Adjust this value to control the dropdown's left position */
+        }
+
+        /* Style the individual items in the vertical dropdown */
+        .dropdown-item {
+          font-size:20px;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            color: #333;
+        }
+      }
+</style>
+<script>
+			const displayName = localStorage.getItem('displayName');
+			document.getElementById('user-display-name').textContent = "Welcome, " + displayName;
+            if(displayName.value = "")
+            {
+                
+			document.getElementById('user-display-name').textContent = "";
+            }
+            else
+            {
+            }
+</script>
